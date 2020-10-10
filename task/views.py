@@ -13,7 +13,7 @@ from . import models
 # Create your views here.
 
 
-class TaskViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin, GenericViewSet, mixins.ListModelMixin):
+class TaskViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin, GenericViewSet, mixins.ListModelMixin,mixins.DestroyModelMixin):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
