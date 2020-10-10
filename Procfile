@@ -1,1 +1,1 @@
-web: gunicorn casefactory.wsgi --preload --workers 1
+web: gunicorn todoX.wsgi --preload --workers 1
