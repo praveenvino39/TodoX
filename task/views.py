@@ -29,7 +29,7 @@ class TaskViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin, GenericVie
 
 
     def get_queryset(self):
-        return models.Task.objects.filter(user=self.request.user).order_by('created_date')
+        return models.Task.objects.filter(user=self.request.user).order_by('is_done')
 
 
     
